@@ -1,0 +1,19 @@
+<header class="jumbotron">
+    <h1 class="text-center">
+      Caelum Pic
+    </h1>
+  </header>
+  <main class="container">
+
+    <div class="row">
+      <div class="col-12 mb-4">
+        <a routerLink="/cadastro" class="btn btn-primary">Nova Foto</a>
+      </div>
+    </div>
+  
+   <div class="row">
+     <caelumpic-card *ngFor="let foto of listafotos" [foto]="foto" class="col-md-4 mb-4"  > 
+         <foto-root [url]="foto.url" [titulo] = "foto.titulo"></foto-root>
+     </caelumpic-card>  
+   </div>
+  </main>
