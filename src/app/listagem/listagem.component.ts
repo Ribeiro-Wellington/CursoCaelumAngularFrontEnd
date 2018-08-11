@@ -28,7 +28,9 @@ export class ListagemComponent implements OnInit {
   Apagar(fotoApagada: Foto){
     this.servico.deletar(fotoApagada)
                 .subscribe(
-                  () => {console.log("Apagou",fotoApagada)
+                  () => {
+                    /*
+                    console.log("Apagou",fotoApagada)
 
                   this.listafotos = this.listafotos
                                         .filter(foto => {
@@ -36,7 +38,9 @@ export class ListagemComponent implements OnInit {
                                              return foto 
                                           }
                                         })
-                },
+               */
+              this.listafotos = this.listafotos.filter(foto => foto != fotoApagada)
+                                      },
                 erro => console.log("Deu Ruim: ", erro)
                 )
   }

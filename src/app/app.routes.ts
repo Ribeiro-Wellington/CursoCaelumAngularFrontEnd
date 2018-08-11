@@ -6,6 +6,7 @@ import { ErroComponent } from "./erro/erro.component";
 const rotasApp:Routes = [
     {path: '', component: ListagemComponent},
     {path: 'cadastro', component: CadastradoComponent},
+    {path: 'editar/:fotoId', component: CadastradoComponent},
     {path: 'erro', component: CadastradoComponent},
     {path:'**', redirectTo: 'erro'}
 ]   

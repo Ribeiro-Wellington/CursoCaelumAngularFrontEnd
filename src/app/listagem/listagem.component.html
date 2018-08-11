@@ -13,7 +13,9 @@
   
    <div class="row">
      <caelumpic-card *ngFor="let foto of listafotos" [foto]="foto" class="col-md-4 mb-4"  > 
+       <a [routerLink]= "['/editar', foto._id]" class= "foto">
          <foto-root [url]="foto.url" [titulo] = "foto.titulo"></foto-root>
+        </a>
          <button (click)="Apagar(foto)" class="btn btn-danger">Apagar</button>
      </caelumpic-card>  
    </div>
